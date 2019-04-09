@@ -408,20 +408,24 @@ We’re going to look and follow along a different tutorial [here](https://githu
 So it has us download a sample app - Node.js Web API
 https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi<br />
 
-
 <br />
 Download it, follow the instructions on installing node, and then run it with:
 ```
 node index.js
 ```
-Let's review:
 
+Make note of a few values:
+![41-747E926CF-3AFF-4F09-9783-873C72897782](https://user-images.githubusercontent.com/3628580/55830570-35e64100-5adf-11e9-9c6b-3fddb8165b41.png)
+
+Let's review:
 ```
     let kTenantName = "2019azureadb2c.onmicrosoft.com" // Your tenant name
     let kClientID = "3a249b71-fd7b-45b8-abe2-05f28aea0293" // Your client ID from the portal when you created your application (THIS WILL BE YOUR NATIVE APP)
     let kSignupOrSigninPolicy = "B2C_1_signupsignin1" // Your signup and sign-in policy you created in the portal
     let kEditProfilePolicy = "B2C_1_profileediting1" // Your edit policy you created in the portal
 ```
+Then, let's run the app.  You'll quickly, see we run into the folowing issue:
+
 
 
 <br />
