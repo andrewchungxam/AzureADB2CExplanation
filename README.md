@@ -407,11 +407,13 @@ https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi<b
 
 <br />
 Download it, follow the instructions on installing node, and then run it with:
+
 ```
 node index.js
 ```
 
 Make note of a few values:
+
 ![41-747E926CF-3AFF-4F09-9783-873C72897782](https://user-images.githubusercontent.com/3628580/55830570-35e64100-5adf-11e9-9c6b-3fddb8165b41.png)
 
 Let's review:
@@ -421,7 +423,7 @@ Let's review:
     let kSignupOrSigninPolicy = "B2C_1_signupsignin1" // Your signup and sign-in policy you created in the portal
     let kEditProfilePolicy = "B2C_1_profileediting1" // Your edit policy you created in the portal
 ```
-Then, let's run the app.  You'll quickly, see we run into the folowing issue:
+Then, let's run the app.  You'll quickly see that we run into the folowing issue:
 
 <img width="417" alt="42-6DAF6951-34B9-43E5-9CCD-369FA6FF686D" src="https://user-images.githubusercontent.com/3628580/55830990-21ef0f00-5ae0-11e9-9abf-935d3a8944d1.png">
 
@@ -467,18 +469,21 @@ Click on Published Scope to find your equivalent of "https://fabrikamb2c.onmicro
 look for the Full Scope Value - you won’t see the full URL, simply click and then copy it and it will copy the full URL.<br />
 
 <br />
-Fill out the below values in your Xcode project:<br />
+Fill out the below values in your Xcode project:
+
 ```
     let kGraphURI = "https://localhost:5000/hello" // This is your backend API that you've configured to accept your app's tokens
     let kScopes: [String] = ["https://2019azureadb2c.onmicrosoft.com/helloapi/demo.read"] // This is a scope that you've configured your backend API to look for.
 ```
+
 <img width="403" alt="47-56080DB6-BEDE-4A55-B985-ABC5A14DD31F" src="https://user-images.githubusercontent.com/3628580/55831262-b194bd80-5ae0-11e9-9656-ad7c186a1aee.png">
 
 
 <br />
-Call API - still didn’t work due to security issues - let’s add the following: (Look at the small + - button to add values and you’ll see drop down lists…if you need to add values “under” other in hierarchy, just select the carrot to the left of the value you care about.<br />
+However, when you press - Call API - it still doesn’t work due to security issues - let’s add the following: (Look at the small + - button to add values and you’ll see drop down lists…if you need to add values “under” other in hierarchy, just select the carrot to the left of the value you care about.  Note, we're allowing insecure transfers of data - this should be done with caution and certainly not be allowed in production scenarios!  <br />
 
 <img width="648" alt="48-FAF1D923-5CA9-4B5A-8BA1-BD9D449F8756" src="https://user-images.githubusercontent.com/3628580/55831282-bd807f80-5ae0-11e9-9d68-5c2d26db1d11.png">
+
 
 <br />
 Now it should work:<br />
@@ -504,7 +509,7 @@ And if you want to change or add, claims - you can do this in the portal.<br />
 Click under the User flows (policies) and then under each policy - you can change the User attribute and Application claim.  (You have do this for each policy and you have to change User attribute and Application claim separately.)<br />
 
 <br />
-For example, below you can add City.  Simply select it below and then press Save.<br />
+For example, below you can add City.  Simply select it below (it is the first selection box) and then press Save.<br />
 
 ![52-A3587DA2-8148-4A6D-A4E7-11129689D206](https://user-images.githubusercontent.com/3628580/55831370-ed2f8780-5ae0-11e9-8fb1-dbf59a4ffcc0.png)
 
