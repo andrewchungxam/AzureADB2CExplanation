@@ -35,21 +35,28 @@ GraphURI
 Scope
 
 ### Let’s define them in the simplest terms: <br />
-Azure AD B2C: Tech that allows you to add/edit/delete users + and allows these users to have controlled access to your backend API.  <br />
-*Tenant:* tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  “Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate. <br />
-ClientId: Applications in the portal are assigned an Id, this is called the ClientId. <br />
-SignupOrSigninPolicy/EditProfilePolicy: Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application. <br /> <br />
+
+*Azure AD B2C:* Tech that allows you to add/edit/delete users + and allows these users to have controlled access to your backend API.  <br />
+
+*Tenant:* tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  
+“Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate. <br />
+
+*ClientId:* Applications in the portal are assigned an Id, this is called the ClientId. <br />
+
+*SignupOrSigninPolicy/EditProfilePolicy:* Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application. <br /> <br />
 
 BackendService: <br />
-GraphURI: This would simply be a backend API - obviously this api will give your user access to useful data
-Scope: Are sometimes called Permissions (in the world of OAuth2.0).  Backend services don’t need to do a binary “give access to everything” or “don’t have access to anything.”  Instead, they can define scopes which give access to a small slice of the full API.  As an example, let’s look at Microsoft Graph — 3 examples of scopes are “Calendars.Read”, “Calendars.ReadWrite”, “Mail.Send” (You can probably guess what each of these scopes give permission; however, of course, these scope definitions are defined by the creators of the backend services.)   <br />
 
-What are Roles?  Is it supported in Azure AD B2C?  <br />
+*GraphURI:* This would simply be a backend API - obviously this api will give your user access to useful data
+
+*Scope:* Are sometimes called Permissions (in the world of OAuth2.0).  Backend services don’t need to do a binary “give access to everything” or “don’t have access to anything.”  Instead, they can define scopes which give access to a small slice of the full API.  As an example, let’s look at Microsoft Graph — 3 examples of scopes are “Calendars.Read”, “Calendars.ReadWrite”, “Mail.Send” (You can probably guess what each of these scopes give permission; however, of course, these scope definitions are defined by the creators of the backend services.)   <br />
+
+*What are Roles?  Is it supported in Azure AD B2C?*  <br />
 https://stackoverflow.com/questions/53602804/azure-active-directory-custom-roles-and-possible-scopes  <br />
 There is no support today for custom roles in Azure Active Directory. Only the predefined Administrator Roles, as described in the documentation, are available for use.  <br />
 https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles  <br />
 
-What is MSAL?  <br />
+*What is MSAL?* <br />
 MSAL is a developer library that helps you to obtain tokens from MSA, Azure AD or Azure B2C for accessing protected resources – such as your own API, Microsoft's API (such as the Microsoft Graph) and any other 3 rd party choosing to protect their API with Microsoft identity.  In OAuth2.0, transfer of Auth and Refresh tokens are core to how authenticated uses are permitted access to resources. Safely handling these tokens is hard, and by using the MSAL, you don’t have to do it, and the MSAL does it for you.  <br />
 
 Running the sample:  <br /> 
