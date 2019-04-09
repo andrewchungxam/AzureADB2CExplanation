@@ -366,7 +366,6 @@ This is the URL associated with your tenant.  Find this by going again to the Di
 
 ![37-E8CE1981-7D30-4E1A-B53A-896B5E103BCB](https://user-images.githubusercontent.com/3628580/55830346-b35d8180-5ade-11e9-8442-25349d7a7803.png)
 
-<br />
 You can also double check to see you got the right one by go Azure AD B2C in the portal (in the search bar, search for Azure AD B2C, on the overview you’ll see:<br />
 
 ![38-4863BB00-813A-49C9-8C7E-BA4B3EB3D8A7](https://user-images.githubusercontent.com/3628580/55830421-de47d580-5ade-11e9-9c8b-67fde4e3bdee.png)
@@ -375,7 +374,8 @@ You can also double check to see you got the right one by go Azure AD B2C in the
     let kClientID = "90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6" // Your client ID from the portal when you created your application
 ```
 <br />
-Your clientId can be seen when click your list of applications.  Copy the Application ID that corresponds to your nativeapp1:<br />
+Your clientId can be seen when click your list of applications.  Copy the Application ID that corresponds to your nativeapp1:
+
 ![39-0DD199FE-D5E0-46A4-B599-12932A19E6BD](https://user-images.githubusercontent.com/3628580/55830440-ef90e200-5ade-11e9-9735-00cb5005d912.png)
 
 ```
