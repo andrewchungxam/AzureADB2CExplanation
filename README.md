@@ -185,46 +185,45 @@ So at this point - we’ve created a Tenant (which represents our organization) 
 ![14-5B970500-65B9-4759-85E9-48DB8BCC8882](https://user-images.githubusercontent.com/3628580/55829345-74c6c780-5adc-11e9-87a0-03b8987263c1.png)
 
 <br />
-Let’s use the new tenant (click again in the upper right on your email address/icon): <br />
+Let’s use the new tenant (click again in the upper right on your email address/icon):
+
 ![15-46C7A84A-E7EB-464D-B3DC-9CAB8066239B](https://user-images.githubusercontent.com/3628580/55829359-8019f300-5adc-11e9-8ef6-3f1bacf19c1f.png)
-<br />
-For the next step - we’re going to need to register our application.<br />
 
 <br />
-In the next step - it says:<br />
+For the next step - we’re going to need to register our application.
+
+![16-2D1E739E-AFD6-4DAA-BB71-0B45F8A1235D](https://user-images.githubusercontent.com/3628580/55829466-b8213600-5adc-11e9-826f-2585c8cf19c1.png)
+
+![17-8A104967-ADF6-41CC-9B70-450A3AC2F466](https://user-images.githubusercontent.com/3628580/55829502-cd966000-5adc-11e9-982a-7fe7899bc7f5.png)
+
+![18-8708FD04-CDEF-42FE-A9F0-5335F1C06902](https://user-images.githubusercontent.com/3628580/55829528-dab34f00-5adc-11e9-90da-d19c8a202557.png)
 
 <br />
-Create a client secret<br />
-If you’re application exchanges a code for a token, you need to create an application secret.<br />
-
-You’ll need to click back into the webapp1.  <br />
-
-Then you’ll need to click “Generate Key” and press “Save” — you’ll see your App key.<br />
-
-
-
+I'm skipping the next section "Create a client secret.
+<br />
 Here is some background reading on some of the OAuth2.0 flows:<br />
 https://aaronparecki.com/oauth-2-simplified/<br />
 
-Questions to address:  <br />
-• Should I allow implicit flow?  What is implicit flow?  What is the appropriate way to set it up?<br />
-• Client Secret - should I do this?  (According to this —> PKE Code exchange is now the standard best practice: https://oauth.net/2/pkce/ <br />
-
-It takes you here: <br /> 
+Creating User Flows: <br /> 
 https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows <br />
 
-Questions to address: <br />
-• If you are looking for information about how to set up a resource owner password credentials (ROPC) flow in your application <br />
+We’re going to add “New user flow":
 
-We’re going to add “New user flow" <br />
+![19-B2F2346B-414D-4375-89CC-8DEB396DC8C9](https://user-images.githubusercontent.com/3628580/55829692-45fd2100-5add-11e9-8ce8-81dbcb8d8840.png)
 
+![20-A85CE894-0036-496B-8E72-31D6AD35372C](https://user-images.githubusercontent.com/3628580/55829716-56150080-5add-11e9-9e8f-471d63fbaff5.png)
 
-Then hit “Create”. <br />
+![21-636FE99C-552B-46A6-A5AE-C8EE798AC7A9](https://user-images.githubusercontent.com/3628580/55829753-6fb64800-5add-11e9-9f93-ae2536ee1f85.png)
 
+Then hit “Create”. 
 <br />
 Then, let’s click back into that newly created userflow and test it out.<br />
 
-Everything should be set - but make sure the “Application” and the “Reply URL” is set: <br />
+![22-9BC4B7EC-5B33-4BE4-A681-9D7A15C421EF](https://user-images.githubusercontent.com/3628580/55829802-88266280-5add-11e9-892b-00a00b508cac.png)
+
+Everything should be set - but make sure the “Application” and the “Reply URL” is set: 
+
+![23-F13B0345-2C59-4812-878D-97CE203775D2](https://user-images.githubusercontent.com/3628580/55829831-9aa09c00-5add-11e9-9926-c3dbf9a5ac4e.png)
 
 <br />
 
@@ -241,18 +240,21 @@ FooFIGHTERS15! (changed)
 Once you signed up / or logged in, it will redirect you to the page you specified - in the sample it was jwt.ms
 <br />
 
+![24-BDEEE448-5BB6-44F9-A444-8C5F027F3FEF](https://user-images.githubusercontent.com/3628580/55829856-ae4c0280-5add-11e9-98f0-246447f0f781.png)
+
 Notice that it returns info you submitted when you signed up -> name, country, and postal code.  These are returned key/values are called “Claims”. <br />
 
 Next - we’ll add the other user flows including: Profile edition and Password reset<br />
 
+![25-3-ADF39104-CCB8-4509-9347-60841BE4A476](https://user-images.githubusercontent.com/3628580/55829882-befc7880-5add-11e9-95cc-8ffed7cbdf26.png)
 
+![26-177B730A-78CE-4453-B180-2E76A142E549](https://user-images.githubusercontent.com/3628580/55829927-db001a00-5add-11e9-8dfb-f0c7078470e1.png)
 
+![27-AC19E76F-735E-4F23-A14A-9A14136310EC](https://user-images.githubusercontent.com/3628580/55829942-e7847280-5add-11e9-8185-dba182a2220b.png)
 
+![28-4173949B-84B2-4A70-8809-4492CDB3EADB](https://user-images.githubusercontent.com/3628580/55829954-f10dda80-5add-11e9-826b-77e851c422ed.png)
 
-
-
-
-
+![29-A9DFDFB2-06AA-447E-ABC2-7BC0101297D2](https://user-images.githubusercontent.com/3628580/55829971-f9661580-5add-11e9-97cc-d6483aafe217.png)
 
 <br />
 We’ve followed the tutorial - it works but it only works with a web application!<br />
@@ -298,16 +300,23 @@ This will correspond to this:
 </array>
 ```
 <br />
-In the end, it should look something like this:<br />
+In the end, it should look something like this:
+
+![30-DA0A3E96-FCAF-4B83-B481-3C7DE41DE30F](https://user-images.githubusercontent.com/3628580/55830014-0e42a900-5ade-11e9-9392-8fc9da268386.png)
 
 <br />
 But you’ll notice, you can’t get the ID without first creating the app.  And you can’t create the app without putting in a custom Redirect URI - so as the first step simply put any Custom Redirect URI.  For example:<br />
+
+![31-3A81B684-F808-4745-A309-C38C468D9F49](https://user-images.githubusercontent.com/3628580/55830041-231f3c80-5ade-11e9-871d-ad80aa25dfff.png)
 
 <br />
 Click Create.<br />
 
 <br />
 Now we’ll have the application and we can grab it’s ID:<br />
+
+![34-0DD199FE-D5E0-46A4-B599-12932A19E6BD](https://user-images.githubusercontent.com/3628580/55830080-39c59380-5ade-11e9-80da-89125c19622d.png)
+
 <br />
 Finally - we’ll need start to make some changes to the actual sample with our actual data! <br /> 
 <br />
