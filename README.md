@@ -164,18 +164,29 @@ I’m creating what I need here:
 
 ![8-1644D5A9-0205-471C-9727-515EBE910257](https://user-images.githubusercontent.com/3628580/55829051-bf940f80-5adb-11e9-91f3-f3c421867fa0.png)
 <br />
-So starting with a directory + subscription that looks like this: <br />
+So starting with a directory + subscription that looks like this: 
+
+![9-1644D5A9-0205-471C-9727-515EBE910257](https://user-images.githubusercontent.com/3628580/55829182-11d53080-5adc-11e9-8371-046a39572ea7.png)
 
 <br />
-I’m now going to: <br />
+I’m now going to: 
 
+![10-9175C845-28B0-4291-82C4-0A079907EAA6](https://user-images.githubusercontent.com/3628580/55829208-274a5a80-5adc-11e9-9175-831f630559d1.png)
+
+![11-85154D82-3CC1-420C-9B37-C954E85659AC](https://user-images.githubusercontent.com/3628580/55829246-392bfd80-5adc-11e9-99c5-45e5a573ef45.png)
+
+![12-817A5314-E6C3-4031-8008-6E06895CC528](https://user-images.githubusercontent.com/3628580/55829265-4517bf80-5adc-11e9-8040-2111531cac36.png)
+
+![13-F989ACE6-8F4B-419E-AB93-288C2BB0B2FF](https://user-images.githubusercontent.com/3628580/55829285-4fd25480-5adc-11e9-8591-ad07fbf645aa.png)
 
 <br />
 So at this point - we’ve created a Tenant (which represents our organization) and then further tied that to a specific Subscription.  And then we’ve further placed that B2C Tenant into a Resource group - you can see it here: <br />
 
+![14-5B970500-65B9-4759-85E9-48DB8BCC8882](https://user-images.githubusercontent.com/3628580/55829345-74c6c780-5adc-11e9-87a0-03b8987263c1.png)
+
 <br />
 Let’s use the new tenant (click again in the upper right on your email address/icon): <br />
-
+![15-46C7A84A-E7EB-464D-B3DC-9CAB8066239B](https://user-images.githubusercontent.com/3628580/55829359-8019f300-5adc-11e9-8ef6-3f1bacf19c1f.png)
 <br />
 For the next step - we’re going to need to register our application.<br />
 
