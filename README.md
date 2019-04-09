@@ -1,9 +1,9 @@
 # AzureADB2CExplanation
 Azure AD B2C Explanation with Swift and Node.js
 
-The purpose of this doc is to create a complementary “explainer” to this sample: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal
+The purpose of this doc is to create a complementary “explainer” to this sample from the Azure-Samples repo: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal .
 
-In the end, you'll have an Swift access that has a SignUp/SignIn, Edit Profile, Logout, and the calling of a API.  The API will be a Node.js application that you'll run locally on your Mac. 
+In the end, you'll have an Swift access that has a SignUp/SignIn, Edit Profile, Logout, and the calling of an API.  The API will be a Node.js application that you'll run locally on your Mac. 
 
 Please always consider check-in/update-dates when working through samples and examples - and try to work with the most up-to-date samples.  The document you are reading now was created in April 2019 (latest update: April 2019); though this explainer may get stale, many of the overviews and principles will still hold.
 
@@ -35,11 +35,11 @@ BackendService:
 GraphURI
 Scope
 
-Let’s define them in the simplest terms:
-Azure AD B2C: Tech that allows you to add/edit/delete users + and allows these users (controlled) access to your backend API.  
-Tenant: tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  “Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate.
-ClientId: Applications are assigned an Id, this is called the ClientId.
-SignupOrSigninPolicy/EditProfilePolicy: Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application.
+#Let’s define them in the simplest terms: <br />
+Azure AD B2C: Tech that allows you to add/edit/delete users + and allows these users to have controlled access to your backend API.  <br />
+Tenant: tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  “Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate. <br />
+ClientId: Applications in the portal are assigned an Id, this is called the ClientId. <br />
+SignupOrSigninPolicy/EditProfilePolicy: Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application. <br /> <br />
 
 BackendService:
 GraphURI: This would simply be a backend API - obviously this api will give your user access to useful data
