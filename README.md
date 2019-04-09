@@ -161,8 +161,6 @@ At this point, all the terms you need to know are defined - so go through the re
 
 <br />
 I’m creating what I need here: 
-
-![8-1644D5A9-0205-471C-9727-515EBE910257](https://user-images.githubusercontent.com/3628580/55829051-bf940f80-5adb-11e9-91f3-f3c421867fa0.png)
 <br />
 So starting with a directory + subscription that looks like this: 
 
@@ -199,10 +197,7 @@ For the next step - we’re going to need to register our application.
 ![18-8708FD04-CDEF-42FE-A9F0-5335F1C06902](https://user-images.githubusercontent.com/3628580/55829528-dab34f00-5adc-11e9-90da-d19c8a202557.png)
 
 <br />
-I'm skipping the next section "Create a client secret.
-<br />
-Here is some background reading on some of the OAuth2.0 flows:<br />
-https://aaronparecki.com/oauth-2-simplified/<br />
+Skip the next section "Create a client secret.  If you'd like to learn more, here is some background reading on some of the OAuth2.0 flows: https://aaronparecki.com/oauth-2-simplified/ and https://oauth.net/2/pkce/ <br />
 
 Creating User Flows: <br /> 
 https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows <br />
@@ -216,6 +211,7 @@ We’re going to add “New user flow":
 ![21-636FE99C-552B-46A6-A5AE-C8EE798AC7A9](https://user-images.githubusercontent.com/3628580/55829753-6fb64800-5add-11e9-9f93-ae2536ee1f85.png)
 
 Then hit “Create”. 
+
 <br />
 Then, let’s click back into that newly created userflow and test it out.<br />
 
@@ -226,9 +222,7 @@ Everything should be set - but make sure the “Application” and the “Reply 
 ![23-F13B0345-2C59-4812-878D-97CE203775D2](https://user-images.githubusercontent.com/3628580/55829831-9aa09c00-5add-11e9-9926-c3dbf9a5ac4e.png)
 
 <br />
-
 Try running “Run user flow” - if it fails, give it a couple minutes and run it.<br />
-
 <br />
 I’ve created a new account - I’ll use:<br />
 
@@ -292,6 +286,7 @@ By the way, make sure there are no spaces after your entry, otherwise you’ll s
 
 <br />
 This will correspond to this:
+
 ```
 <key>CFBundleURLSchemes</key>
 <array>
@@ -299,6 +294,7 @@ This will correspond to this:
 <string>auth</string>
 </array>
 ```
+
 <br />
 In the end, it should look something like this:
 
