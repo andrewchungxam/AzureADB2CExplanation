@@ -324,12 +324,14 @@ The first change will be in the info.plist.  Again, right click and open as as S
 <br />
 Make your modifications here:<br />
 
+<img width="811" alt="35-10FAEE98-4C33-4F09-BA0A-A71E2142793F" src="https://user-images.githubusercontent.com/3628580/55830198-71ccd680-5ade-11e9-8dbf-de7e516b5b79.png">
+
 <br />
 Then, as we did for the web app, try running the policies that we already created (SignupOrSigninPolicy, EditProfile, PasswordReset).<br />
 <br />
 You see something like the following - and of course use the nativeapp1 as your application.<br />
 
-
+![36-B62AE412-58B4-4039-BD42-58CFD0DD24BD](https://user-images.githubusercontent.com/3628580/55830221-7e512f00-5ade-11e9-8915-374fd10fa7a0.png)
 
 <br />
 Try for example, doing the password reset flow.<br />
@@ -351,26 +353,33 @@ In the file: ViewController.cs<br />
 
     // DO NOT CHANGE - This is the format of OIDC Token and Authorization endpoints for Azure AD B2C.
     let kEndpoint = "https://login.microsoftonline.com/tfp/%@/%@"
-```    
+```   
+
 <br />
 Now, we have enough to change the first four variables.<br />
 <br />
+
 Let’s handle them one-by-one.<br />
 ```
     let kTenantName = "fabrikamb2c.onmicrosoft.com" // Your tenant name
 ```
+
 <br />
 This is the URL associated with your tenant.  Find this by going again to the Directory + subscription menu on the portal (Go the portal, click your email/photo in the upper right of the screen) and find the relevant directory that you’ve been working out of up to this point (ie. the tenant you created in the early part of this tutorial.  You want that URL at the bottom of the image.):<br />
+
+![37-E8CE1981-7D30-4E1A-B53A-896B5E103BCB](https://user-images.githubusercontent.com/3628580/55830346-b35d8180-5ade-11e9-8442-25349d7a7803.png)
 
 <br />
 You can also double check to see you got the right one by go Azure AD B2C in the portal (in the search bar, search for Azure AD B2C, on the overview you’ll see:<br />
 
+![38-4863BB00-813A-49C9-8C7E-BA4B3EB3D8A7](https://user-images.githubusercontent.com/3628580/55830421-de47d580-5ade-11e9-9c8b-67fde4e3bdee.png)
 
 ```
     let kClientID = "90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6" // Your client ID from the portal when you created your application
 ```
 <br />
 Your clientId can be seen when click your list of applications.  Copy the Application ID that corresponds to your nativeapp1:<br />
+![39-0DD199FE-D5E0-46A4-B599-12932A19E6BD](https://user-images.githubusercontent.com/3628580/55830440-ef90e200-5ade-11e9-9735-00cb5005d912.png)
 
 ```
     let kSignupOrSigninPolicy = "b2c_1_susi" // Your signup and sign-in policy you created in the portal
@@ -379,12 +388,16 @@ Your clientId can be seen when click your list of applications.  Copy the Applic
 <br />
 Grab these from the User flows (policies) menu item here:<br />
 
+![40-E72EAA44-F450-4759-A673-98D5CDA7F2E0](https://user-images.githubusercontent.com/3628580/55830479-020b1b80-5adf-11e9-92e1-27c71cbdcd8f.png)
+
 <br />
 Becomes the following with our values:<br />
+
 ```
     let kSignupOrSigninPolicy = "B2C_1_signupsignin1" // Your signup and sign-in policy you created in the portal
     let kEditProfilePolicy = "B2C_1_profileediting1" // Your edit policy you created in the portal
 ```
+
 <br />
 If you prefer not to retype the policy name, simply click the policy and copy the policy name from the next screen.<br />
 <br />
