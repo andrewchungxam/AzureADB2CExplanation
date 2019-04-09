@@ -338,6 +338,7 @@ So now, let’s go back to the mobile app and see what we can change here:<br />
 
 <br />
 In the file: ViewController.cs<br />
+
 ```
     let kTenantName = "fabrikamb2c.onmicrosoft.com" // Your tenant name
     let kClientID = "90c0fe63-bcf2-44d5-8fb7-b8bbc0b29dc6" // Your client ID from the portal when you created your application
@@ -349,7 +350,7 @@ In the file: ViewController.cs<br />
 
     // DO NOT CHANGE - This is the format of OIDC Token and Authorization endpoints for Azure AD B2C.
     let kEndpoint = "https://login.microsoftonline.com/tfp/%@/%@"
-```   
+```  
 
 <br />
 Now, we have enough to change the first four variables.<br />
