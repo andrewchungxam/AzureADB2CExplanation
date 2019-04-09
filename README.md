@@ -36,7 +36,7 @@ Scope
 
 ### Let’s define them in the simplest terms: <br />
 Azure AD B2C: Tech that allows you to add/edit/delete users + and allows these users to have controlled access to your backend API.  <br />
-**Tenant:** tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  “Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate. <br />
+*Tenant:* tenant is the “folder” or “container” where you define an Azure AD B2C instance and where you define “applications”.  “Application” are either the web endpoints or mobile apps that you are trying to make available to certain users who authenticate. <br />
 ClientId: Applications in the portal are assigned an Id, this is called the ClientId. <br />
 SignupOrSigninPolicy/EditProfilePolicy: Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application. <br /> <br />
 
