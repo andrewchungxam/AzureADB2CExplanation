@@ -1,8 +1,6 @@
 # AzureADB2CExplanation
 Azure AD B2C Explanation with Swift and Node.js
 
-Azure AD B2C with Swift.  
-
 The purpose of this doc is to create a complementary “explainer” to this sample: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal
 
 In the end, you'll have an Swift access that has a SignUp/SignIn, Edit Profile, Logout, and the calling of a API.  The API will be a Node.js application that you'll run locally on your Mac. 
