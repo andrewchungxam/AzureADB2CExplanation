@@ -78,9 +78,11 @@ Step 4 from these [instructions](https://github.com/Azure-Samples/active-directo
 <img width="1221" alt="283C4FDE-F5B1-4B6A-A41F-984C8C372C12" src="https://user-images.githubusercontent.com/3628580/55828550-ac347480-5ada-11e9-97a3-10e155d04f95.png">
 
 <br />
+Step 5 from these [instructions](https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos):  (If you’re not familiar play attention to the what has been highlighted (from left to right): The blue folder, the solution highlighted, the target (MSALiOSB2C), Build Phases (in blue), and see the Run Script.  
 
-Step 5 from these [instructions](https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos):  (If you’re not familiar play attention to the what has been highlighted (from left to right): The blue folder, the solution highlighted, the target (MSALiOSB2C), Build Phases (in blue), and see the Run Script. <br />
+<img width="1100" alt="2-505888E7-E31B-4A7E-BB31-2C6C7AA46CFF" src="https://user-images.githubusercontent.com/3628580/55828654-e736a800-5ada-11e9-91fa-3dcc0f839336.png">
 
+<br />
 Notice this instruction [Step 1:](https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#configure-your-application) <br />
 
 ```
@@ -100,13 +102,16 @@ xml
     </array>
 ```
 
-Look back at your sample (in Xcode) and then open the Info.plist as source code (see screenshot below):<br />
+Look back at your sample (in Xcode) and then open the Info.plist as source code (see screenshot below):
 
+<img width="537" alt="3-ADF39104-CCB8-4509-9347-60841BE4A476" src="https://user-images.githubusercontent.com/3628580/55828739-1c42fa80-5adb-11e9-9c1f-3c7dd5861f2c.png">
 
+<img width="596" alt="4-5411B8D4-E861-4E9F-A61F-807958047DEB" src="https://user-images.githubusercontent.com/3628580/55828806-3d0b5000-5adb-11e9-91ed-155719af78c6.png">
 
 <br />
-Run the sample.  You’ll see various things you can do including creating a profile:<br />
+Run the sample.  You’ll see various things you can do including creating a profile:
 
+<img width="482" alt="5-F22D6B63-6C93-43E0-8F5B-BFD0A22986E8" src="https://user-images.githubusercontent.com/3628580/55828836-4c8a9900-5adb-11e9-9ea5-c3a24414eebe.png">
 <br />
 ## App Registration
 
@@ -140,21 +145,24 @@ What is a Tenant?<br />
 * Azure tenants that access other services in a shared environment, across multiple organizations, are considered multi-tenant.<br />
 
 What is a Directory?
-So - before we answer this - let’s look at what we mean first.  In your Azure subscription, click on your email address/icon in the upper right:<br />
+So - before we answer this - let’s look at what we mean first.  In your Azure subscription, click on your email address/icon in the upper right:
 
-
-Click: Switch directory<br />
-
+<img width="323" alt="6-651CAE89-5020-441F-ADE3-56D5BA62EF5F" src="https://user-images.githubusercontent.com/3628580/55828897-6deb8500-5adb-11e9-9a6a-35769cc9a5fb.png">
+<br />
+Click: Switch directory
+<br />
 You’ll see this (and notice - No subscriptions in andrewchungxamoutlook which shows us we’re in the wrong directory to complete the next steps in the tutorial.).<br />
 
+<img width="347" alt="7-6CD9E18C-7BA3-4028-826F-FF208A9F1319" src="https://user-images.githubusercontent.com/3628580/55828991-9d01f680-5adb-11e9-89ed-a846d9320822.png">
 
 A directory refers to an Azure AD Directory.  This is the actual directory of users and the apps that the users will have access to.  The Azure AD Dictory will be used to perform identity and access management functionality for the resources of the organization (ie. of the tenant). <br />
 
-At this point, all the terms you need to know are defined - so go through the rest of the tutorial [here](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant); <br />
+At this point, all the terms you need to know are defined - so go through the rest of the tutorial [here](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-tenant); 
 
-I’m creating what I need here: <br />
+<br />
+I’m creating what I need here: 
 
-
+![8-1644D5A9-0205-471C-9727-515EBE910257](https://user-images.githubusercontent.com/3628580/55829051-bf940f80-5adb-11e9-91f3-f3c421867fa0.png)
 <br />
 So starting with a directory + subscription that looks like this: <br />
 
