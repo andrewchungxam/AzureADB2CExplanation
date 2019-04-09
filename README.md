@@ -426,6 +426,7 @@ Let's review:
 ```
 Then, let's run the app.  You'll quickly, see we run into the folowing issue:
 
+<img width="417" alt="42-6DAF6951-34B9-43E5-9CCD-369FA6FF686D" src="https://user-images.githubusercontent.com/3628580/55830990-21ef0f00-5ae0-11e9-9abf-935d3a8944d1.png">
 
 
 <br />
@@ -440,9 +441,12 @@ So I’ve created one called webapp2:<br />
 <br />
 I’ve created a web app - similar to the one we did earlier on - here are the values and selections:<br />
 
+![43-E01A73C6-4E11-4C48-9A33-5F45FBB2EE0A](https://user-images.githubusercontent.com/3628580/55831043-3d5a1a00-5ae0-11e9-8da2-451deb70ae67.png)
+
 <br />
 You need this in your published scope:<br />
 
+![44-946BDA93-D8A4-4ACC-8CAF-C31EEB3F05FD](https://user-images.githubusercontent.com/3628580/55831073-4cd96300-5ae0-11e9-806b-800f5954c782.png)
 
 <br />
 Now look at this issue: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/issues/2 <br />
@@ -453,8 +457,13 @@ What happened here is that you need to let the Native app, ie the iOS applicatio
 <br />
 On the left side, click API access, click + Add, and then API Access:<br />
 
+![45-C71AEEFD-8EA6-45FE-A3D6-1CEFA0EE2EBA](https://user-images.githubusercontent.com/3628580/55831192-87430000-5ae0-11e9-83c3-9763ffb8f96d.png)
+
 <br />
 Now it looks like this (and now, nativeapp1 - my iOS app has the webapp2 as an API and has 2 permitted scopes.  (remember scope from our definitions can be roughly translated as “permissions” - so your api has access to two sets of “permissions”)<br />
+
+![46-86884B82-D1FF-4F2D-87C8-99CDF7DD6AD7](https://user-images.githubusercontent.com/3628580/55831222-9a55d000-5ae0-11e9-9361-b405233bded7.png)
+
 
 <br />
 Click on Published Scope to find your equivalent of "https://fabrikamb2c.onmicrosoft.com/helloapi/demo.read”
@@ -466,21 +475,30 @@ Fill out the below values in your Xcode project:<br />
     let kGraphURI = "https://localhost:5000/hello" // This is your backend API that you've configured to accept your app's tokens
     let kScopes: [String] = ["https://2019azureadb2c.onmicrosoft.com/helloapi/demo.read"] // This is a scope that you've configured your backend API to look for.
 ```
+<img width="403" alt="47-56080DB6-BEDE-4A55-B985-ABC5A14DD31F" src="https://user-images.githubusercontent.com/3628580/55831262-b194bd80-5ae0-11e9-9656-ad7c186a1aee.png">
+
+
 <br />
 Call API - still didn’t work due to security issues - let’s add the following: (Look at the small + - button to add values and you’ll see drop down lists…if you need to add values “under” other in hierarchy, just select the carrot to the left of the value you care about.<br />
 
+<img width="648" alt="48-FAF1D923-5CA9-4B5A-8BA1-BD9D449F8756" src="https://user-images.githubusercontent.com/3628580/55831282-bd807f80-5ae0-11e9-9d68-5c2d26db1d11.png">
 
 <br />
 Now it should work:<br />
 
+<img width="392" alt="49-414DB552-E342-4353-A9A5-85E918A2C769" src="https://user-images.githubusercontent.com/3628580/55831301-c6715100-5ae0-11e9-82e6-5ab8d1e162b3.png">
 
 
 <br />
 By the way, in your terminal check out the claims returned - make sure the claim your referencing in your Node.js code matches a what you’re looking for in the Node.js code.  Note if you’re changing code in node you just both save the file you’ve modified (this won’t happen automatically) and then rerun the command "node index.js”.<br />
 
+<img width="866" alt="50-678E9AAF-08FF-4AC8-B659-89988DE7DC66" src="https://user-images.githubusercontent.com/3628580/55831320-d0934f80-5ae0-11e9-8ef9-ab170e30e215.png">
+
+
 <br />
 You can change the claim you’re referencing here in the Node.js code:  Look at the last two lines - two examples of claims you can be looking for:<br />
 
+![51-BDCB4AB3-CCEA-4DCE-B667-B5246A40F987](https://user-images.githubusercontent.com/3628580/55831345-de48d500-5ae0-11e9-9c83-0f42103c5563.png)
 
 <br />
 And if you want to change or add, claims - you can do this in the portal.<br />
@@ -491,9 +509,12 @@ Click under the User flows (policies) and then under each policy - you can chang
 <br />
 For example, below you can add City.  Simply select it below and then press Save.<br />
 
+![52-A3587DA2-8148-4A6D-A4E7-11129689D206](https://user-images.githubusercontent.com/3628580/55831370-ed2f8780-5ae0-11e9-8fb1-dbf59a4ffcc0.png)
 
 <br />
 then you do it again for Application claims.<br />
+
+![53-B2C6B002-F03D-41F0-9843-4D609ED36AF8](https://user-images.githubusercontent.com/3628580/55831391-fb7da380-5ae0-11e9-8933-a3c728a93589.png)
 
 <br />
 Now that is done for the SignupSignIn policy - if you’d like to do it for the other policies (like EditProfile, then select into that policy and repeat the same process.).<br />
@@ -502,6 +523,17 @@ Now that is done for the SignupSignIn policy - if you’d like to do it for the 
 Review, in the end, it should look like this: <br />
 Xcode (clientID represents your native app in the AD B2C portal): <br />
 
+<img width="1091" alt="54-A324315D-89DA-4321-800A-E162FB747755" src="https://user-images.githubusercontent.com/3628580/55831496-37186d80-5ae1-11e9-81b2-3985e3ac26e0.png">
+
+
+<img width="616" alt="55-F7F9B610-99DC-4661-8597-B4E3E47B0389" src="https://user-images.githubusercontent.com/3628580/55831490-3253b980-5ae1-11e9-9ffa-9c591cb05cd5.png">
+
 
 <br />
 Node.js project: (clientID represents your web app)<br />
+
+![56-D5566FD7-1453-44AD-A0BE-B9FEE7F56E32](https://user-images.githubusercontent.com/3628580/55831475-2bc54200-5ae1-11e9-8242-087c2e7c1b6b.png)
+
+
+![57-EC30C8E7-3FD2-46FE-8635-E186D3FAB0C2](https://user-images.githubusercontent.com/3628580/55831467-27008e00-5ae1-11e9-8075-52b0a8226812.png)
+
