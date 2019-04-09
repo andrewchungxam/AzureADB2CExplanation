@@ -67,11 +67,16 @@ If you see the complaints - simply upgrade it: <br />
 brew upgrade carthage
 
 Then:<br />
-carthage bootstrap<br />
+```
+carthage bootstrap
+```
 
 Then there are many instructions of dragging and dropping various frameworks - I found that these were already preset/done in the sample - let me include the screeshots so you can confirm you see the same:<br />
 
 Step 4 from these [instructions](https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos):  (If you’re not familiar play attention to the what has been highlighted (from left to right): The blue folder, the solution highlighted, the target (MSALiOSB2C), General (in blue), and then scroll down until you see “Linked Frameworks and Libraries”)
+
+<img width="1221" alt="283C4FDE-F5B1-4B6A-A41F-984C8C372C12" src="https://user-images.githubusercontent.com/3628580/55828550-ac347480-5ada-11e9-97a3-10e155d04f95.png">
+
 <br />
 
 Step 5 from these [instructions](https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos):  (If you’re not familiar play attention to the what has been highlighted (from left to right): The blue folder, the solution highlighted, the target (MSALiOSB2C), Build Phases (in blue), and see the Run Script. <br />
