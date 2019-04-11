@@ -1,4 +1,4 @@
-# AzureADB2CExplanation
+# Azure AD B2C Explanation
 Azure AD B2C Explanation with Swift and Node.js
 
 The purpose of this doc is to create a complementary “explainer” to the following sample from the Azure-Samples repo: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal .
