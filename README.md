@@ -60,14 +60,14 @@ https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/direc
 MSAL is a developer library that helps you to obtain tokens from MSA, Azure AD or Azure B2C for accessing protected resources – such as your own API, Microsoft's API (such as the Microsoft Graph) and any other 3rd party choosing to protect their API with Microsoft identity.  In OAuth2.0, transfer of Auth and Refresh tokens are core to how authenticated uses are permitted access to resources. Safely handling these tokens is hard, and by using the MSAL, you don’t have to code it yourself.  <br />
 
 Running the sample:  <br /> 
-The instructions are not the most clear on this point - but actually, the sample comes connected with a working Azure AD B2C. There are some minor steps/installations that you’ll need to do before you can get the sample running. <br />
+The instructions are not the most clear on this point - but actually, the sample comes connected with a working Azure AD B2C instance already configured.  You can't change any of the values, but you can run the sample and use it to login etc. There are some minor steps/installations that you’ll need to do before you can get the sample running. <br />
 
-Note - I’m running my sample from a Mac + Visual Studio for Mac.  I’ll assume you have access to a Mac in some of your work as we are dealing with Swift/iOS in this sample.  <br />
+Note - I’m running my sample from a Mac + Visual Studio for Mac.  I’ll assume you have access to a Mac as we are dealing with Swift/iOS in this sample.  <br />
 
 In the sample, there are some installation instructions [here](
 https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos).
 
-Firstly, I ran there first command:  <br />
+Firstly, I ran the first command:  <br />
 brew install carthage  (it may update brew, and often you’ll have carthage already installed and so you’ll instead be asked to update carthage).
 
 If you see the complaints - simply upgrade it: <br />
@@ -128,17 +128,17 @@ Now, let’s create our own B2C Tenant and App Registration.  The above app regi
 
 The first thing to realize about the steps that you’re about to see is that there can be specific points where permissions are necessary.  When you try to register your application, you’ll either be fine or realize that somebody is locking you out (to protect the security of the resources in that particular tenant.).<br />
 
-If this is the first time you’re running through this tutorial, you may want to start from a personal account (“trying it out at home”) so you can go through the elements, see how they work, before getting the necessary permissions to do it for “real”.<br />
+If this is the first time you’re running through this tutorial, you may want to start from a personal account (“trying it out at home”) so you can go through the elements, see how they work, before getting the required permissions.<br />
 
 Step 2:  Make sure that you are using the directory that contains your subscription by clicking the Directory and subscription filter in the top menu and choosing the directory that contains it. This directory is different than the one that will contain your Azure AD B2C tenant.<br />
 
 Hmmmm….let’s unpack that shall we.<br />
 
 Azure account:<br />
-First - you’ll need to understand that you logged in with your Azure account. Not sure what I mean - logout and then log back in.  You’ve just used your Azure account.<br />
+First - you’ll need to understand that you logged in with your Azure account. Not sure what I mean? Logout and then log back in.  You’ve just used your Azure account.<br />
 
 Azure subscription:<br />
-Your Azure account can have more than one subscription - to manage for example centrally-billed work expenses and project A resources, project B resources, and the non-profit project sponsored by work. You can see how to do that [here](https://docs.microsoft.com/en-us/azure/billing/billing-create-subscription).<br />
+Your Azure account can have more than one subscription - to manage, for example, centrally-billed work expenses and then seperating project A resources from project B resources, and then one for the non-profit project sponsored by work. You can see how to do that [here](https://docs.microsoft.com/en-us/azure/billing/billing-create-subscription).<br />
 
 By the way: An Azure subscription has a trust relationship with Azure Active Directory (Azure AD), which means that the subscription trusts Azure AD to authenticate users, services, and devices. Multiple subscriptions can trust the same Azure AD directory, but each subscription can only trust a single directory.<br />
 
