@@ -1,9 +1,9 @@
 # AzureADB2CExplanation
 Azure AD B2C Explanation with Swift and Node.js
 
-The purpose of this doc is to create a complementary “explainer” to this sample from the Azure-Samples repo: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal .
+The purpose of this doc is to create a complementary “explainer” to the following sample from the Azure-Samples repo: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal .
 
-In the end, you'll have an Swift access that has a SignUp/SignIn, Edit Profile, Logout, and the calling of an API.  The API will be a Node.js application that you'll run locally on your Mac. 
+In the end, you'll have a Swift app that has the ability for a user to SignUp/SignIn, Edit Profile, Logout, and the ability to call an API.  The API will be a Node.js application that you'll run locally on your Mac. 
 
 Please always consider check-in/update-dates when working through samples and examples - and try to work with the most up-to-date samples.  The document you are reading now was created in April 2019 (latest update: April 2019); though this explainer may get stale, many of the overviews and principles will still hold.
 
@@ -43,13 +43,13 @@ Scope
 
 *ClientId:* Applications in the portal are assigned an Id, this is called the ClientId. <br />
 
-*SignupOrSigninPolicy/EditProfilePolicy:* Policies define the types of interaction flows users will see/have access to.  (ie. allowing signing up for an account or allowing a user to edit an existing account.  Rather than coding any of this - common flows are defined as policies; policies can be slightly customized. You assign policies to an Application. <br /> <br />
+*SignupOrSigninPolicy/EditProfilePolicy:* Policies define the types of interaction flows that users will see/have access to.  (e.g. allowing users to sign up for an account or allowing a user to edit an existing account.  Rather than coding any of these - common flows are defined as policies; policies can be slightly customized. <br /> <br />
 
 BackendService: <br />
 
-*GraphURI:* This would simply be a backend API - obviously this api will give your user access to useful data
+*GraphURI:* This would simply be a backend API - obviously this API will give your user access to useful data
 
-*Scope:* Are sometimes called Permissions (in the world of OAuth2.0).  Backend services don’t need to do a binary “give access to everything” or “don’t have access to anything.”  Instead, they can define scopes which give access to a small slice of the full API.  As an example, let’s look at Microsoft Graph — 3 examples of scopes are “Calendars.Read”, “Calendars.ReadWrite”, “Mail.Send” (You can probably guess what each of these scopes give permission; however, of course, these scope definitions are defined by the creators of the backend services.)   <br />
+*Scope:* Think of them as permissions in the world of OAuth2.0.  Backend services don’t need to do a binary “give access to everything” or “don’t have access to anything.”  Instead, they can define scopes which give access to a small slice of the full API.  As an example, let’s look at Microsoft Graph — 3 examples of scopes are “Calendars.Read”, “Calendars.ReadWrite”, “Mail.Send” (You can probably guess what each of these scopes give permission; however, of course, these scope definitions are defined by the creators of the backend services.)   <br />
 
 *What are Roles?  Is it supported in Azure AD B2C?*  <br />
 https://stackoverflow.com/questions/53602804/azure-active-directory-custom-roles-and-possible-scopes  <br />
@@ -57,14 +57,14 @@ There is no support today for custom roles in Azure Active Directory. Only the p
 https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles  <br />
 
 *What is MSAL?* <br />
-MSAL is a developer library that helps you to obtain tokens from MSA, Azure AD or Azure B2C for accessing protected resources – such as your own API, Microsoft's API (such as the Microsoft Graph) and any other 3 rd party choosing to protect their API with Microsoft identity.  In OAuth2.0, transfer of Auth and Refresh tokens are core to how authenticated uses are permitted access to resources. Safely handling these tokens is hard, and by using the MSAL, you don’t have to do it, and the MSAL does it for you.  <br />
+MSAL is a developer library that helps you to obtain tokens from MSA, Azure AD or Azure B2C for accessing protected resources – such as your own API, Microsoft's API (such as the Microsoft Graph) and any other 3rd party choosing to protect their API with Microsoft identity.  In OAuth2.0, transfer of Auth and Refresh tokens are core to how authenticated uses are permitted access to resources. Safely handling these tokens is hard, and by using the MSAL, you don’t have to code it yourself.  <br />
 
 Running the sample:  <br /> 
 The instructions are not the most clear on this point - but actually, the sample comes connected with a working Azure AD B2C. There are some minor steps/installations that you’ll need to do before you can get the sample running. <br />
 
 Note - I’m running my sample from a Mac + Visual Studio for Mac.  I’ll assume you have access to a Mac in some of your work as we are dealing with Swift/iOS in this sample.  <br />
 
-In the sample there are some installation instructions [here](
+In the sample, there are some installation instructions [here](
 https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal/blob/master/README.md#if-youre-building-for-ios-tvos-or-watchos).
 
 Firstly, I ran there first command:  <br />
