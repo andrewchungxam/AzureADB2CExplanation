@@ -270,7 +270,8 @@ If you scroll around on the left column, let’s click Concepts and Application 
 The explanation is clear.  <br />
 
 <br />
-Applications that are installed on devices, such as mobile and desktop applications, often need to access back-end services or web APIs on behalf of users. You can add customized identity management experiences to your native applications and securely call back-end services by using Azure AD B2C and the OAuth 2.0 authorization code flow.
+Applications that are installed on devices, such as mobile and desktop applications, often need to access back-end services or web APIs on behalf of users. You can add customized identity management experiences to your native applications and securely call back-end services by using Azure AD B2C and the OAuth 2.0 authorization code flow.<br />
+
 In this flow, the application executes policies and receives an authorization_code from Azure AD after the user completes the policy. The authorization_code represents the application's permission to call back-end services on behalf of the user who is currently signed in. The application can then exchange the authorization_code in the background for an access_token and a refresh_token. The application can use the access_token to authenticate to a back-end web API in HTTP requests. It can also use the refresh_token to get a new access_token when an older one expires. <br />
 
 <br />
@@ -430,10 +431,10 @@ Let's review:
     let kSignupOrSigninPolicy = "B2C_1_signupsignin1" // Your signup and sign-in policy you created in the portal
     let kEditProfilePolicy = "B2C_1_profileediting1" // Your edit policy you created in the portal
 ```
+
 Then, let's run the app.  You'll quickly see that we run into the folowing issue:
 
 <img width="417" alt="42-6DAF6951-34B9-43E5-9CCD-369FA6FF686D" src="https://user-images.githubusercontent.com/3628580/55830990-21ef0f00-5ae0-11e9-9abf-935d3a8944d1.png">
-
 
 <br />
 Okay - we’re missing a step.  We downloaded and ran the web app - we configured a couple values there.  <br />
@@ -526,7 +527,7 @@ then you do it again for Application claims.<br />
 ![53-B2C6B002-F03D-41F0-9843-4D609ED36AF8](https://user-images.githubusercontent.com/3628580/55831391-fb7da380-5ae0-11e9-8933-a3c728a93589.png)
 
 <br />
-Now that is done for the SignupSignIn policy - if you’d like to do it for the other policies (like EditProfile, then select into that policy and repeat the same process.).<br />
+Now that is done for the SignupSignIn policy - if you’d like to do it for the other policies (like EditProfile, then click into that policy and repeat the same process.).<br />
 
 <br />
 Review, in the end, it should look like this: <br />
